@@ -1,44 +1,45 @@
 import type { Site, Metadata, Socials } from "@types";
 
 export const SITE: Site = {
-  NAME: "Astro Nano",
-  EMAIL: "markhorn.dev@gmail.com",
-  NUM_POSTS_ON_HOMEPAGE: 3,
-  NUM_WORKS_ON_HOMEPAGE: 2,
+  NAME: "Amine Tayani",
+  EMAIL: "amine.tayani@gmail.com",
+  NUM_POSTS_ON_HOMEPAGE: 1,
+  NUM_WORKS_ON_HOMEPAGE: 3,
   NUM_PROJECTS_ON_HOMEPAGE: 3,
 };
 
 export const HOME: Metadata = {
   TITLE: "Home",
-  DESCRIPTION: "Astro Nano is a minimal and lightweight blog and portfolio.",
+  DESCRIPTION: "Home of Amine's Portfolio.",
 };
 
 export const BLOG: Metadata = {
   TITLE: "Blog",
-  DESCRIPTION: "A collection of articles on topics I am passionate about.",
+  DESCRIPTION: "A collection of blog posts that I have written.",
 };
 
 export const WORK: Metadata = {
-  TITLE: "Work",
-  DESCRIPTION: "Where I have worked and what I have done.",
+  TITLE: "Experience",
+  DESCRIPTION: "A collection of my work experiences.",
 };
 
 export const PROJECTS: Metadata = {
   TITLE: "Projects",
-  DESCRIPTION: "A collection of my projects, with links to repositories and demos.",
+  DESCRIPTION:
+    "A collection of my projects, with links to repositories and demos.",
 };
 
 export const SOCIALS: Socials = [
-  { 
-    NAME: "twitter-x",
-    HREF: "https://twitter.com/markhorn_dev",
+  {
+    NAME: "Github",
+    HREF: "https://github.com/amine-tayani/",
   },
-  { 
-    NAME: "github",
-    HREF: "https://github.com/markhorn-dev"
+  {
+    NAME: "Twitter",
+    HREF: "https://x.com/maximadotdev",
   },
-  { 
-    NAME: "linkedin",
-    HREF: "https://www.linkedin.com/in/markhorn-dev",
-  }
+  {
+    NAME: "Linkedin",
+    HREF: "https://www.linkedin.com/in/aminety/",
+  },
 ];

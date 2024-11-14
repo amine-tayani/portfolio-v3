@@ -1,75 +1,52 @@
 ---
-title: "Astro Sphere"
-description: "Portfolio and blog build with astro."
+title: "Onyx"
+description: "onyx is a web app for managing your job applications."
 date: "Mar 18 2024"
-demoURL: "https://astro-sphere-demo.vercel.app"
-repoURL: "https://github.com/markhorn-dev/astro-sphere"
+demoURL: "https://github.com/amine-tayani/onyxapp"
+repoURL: "https://github.com/amine-tayani/onyxapp"
 ---
 
-![Astro Sphere Lighthouse Score](/astro-sphere.jpg)
-
-Astro Sphere is a static, minimalist, lightweight, lightning fast portfolio and blog theme based on my personal website.
-
-It is primarily Astro, Tailwind and Typescript, with a very small amount of SolidJS for stateful components.
-
-## 🚀 Deploy your own
-
-<div class="flex gap-2">
-  <a target="_blank" aria-label="Deploy with Vercel" href="https://vercel.com/new/clone?repository-url=https://github.com/markhorn-dev/astro-sphere">
-    <img src="/deploy_vercel.svg" />
+<p align="center">
+  <a href="https://github.com/amine-tayani/onyxapp">
+   <img src="/onyx-hero.png" alt="Landing">
   </a>
-  <a target="_blank" aria-label="Deploy with Netlify" href="https://app.netlify.com/start/deploy?repository=https://github.com/markhorn-dev/astro-sphere">
-    <img src="/deploy_netlify.svg" />
-  </a>
-</div>
+</p>
 
-## 📋 Features
+Onyx is a job search management tool that helps you organize and track your every step of your job search. it is a full stack application built with Next.js, React, Shadcn, TypeScript and Tailwind CSS / Tiptap Wysiwyg editor.
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
-- ✅ Searchable content (posts and projects)
+## 🚀 Installation
 
-## 💯 Lighthouse score
-![Astro Sphere Lighthouse Score](/lighthouse.png)
+```sh
+ git clone https://github.com/amine-tayani/onyxapp.git
+```
 
-## 🕊️ Lightweight
-All pages under 100kb (including fonts)
+2. Install NPM packages using Bun
 
-## ⚡︎ Fast
-Rendered in ~40ms on localhost
+   ```sh
+   bun install
+   ```
 
-## 📄 Configuration
+## Usage
 
-The blog posts on the demo serve as the documentation and configuration.
+1. Run the development server:
 
-## 💻 Commands
+   ```sh
+   bun run dev
+   ```
 
-All commands are run from the root of the project, from a terminal:
+2. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
+## 📋 Features & Tech
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run sync`            | Generates TypeScript types for all Astro modules.|
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-| `npm run lint`            | Run ESLint                                       |
-| `npm run lint:fix`        | Auto-fix ESLint issues                           |
+- ✅ Fully responsive
+- ✅ Dark mode
+- ✅ Tailwind CSS
+- ✅ TypeScript
+- ✅ Next.js 14
+- ✅ React 18
+- ✅ Shadcn UI
+- ✅ Tiptap Wysiwyg editor
+- ✅ Next-auth
 
 ## 🏛️ License
 
