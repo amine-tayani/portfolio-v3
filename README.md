@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0e6b63a1f928553060f17bb150fed1ad79c7e189
 My personal portfolio built with Astro, TailwindCSS and Typescript, an no frameworks.
 
 ## 📋 Features
