@@ -1,4 +1,3 @@
-![Astro Nano](_astro_nano.png)
 
 My personal portfolio built with Astro, TailwindCSS and Typescript, an no frameworks.
 

@@ -4,25 +4,114 @@ import Link from "@components/Link.astro";
 import { SITE } from "@consts";
 ---
 
-<header>
+<header class="mt-4 relative z-50">
   <Container>
-    <div class="flex flex-wrap gap-y-2 justify-between">
-      <Link href="/" underline={false}>
-        <div class="font-semibold">
+    <div class="flex flex-wrap gap-y-2 justify-between items-center">
+      <a href="/">
+        <div class="font-semibold text-xl">
           {SITE.NAME}
         </div>
-      </Link>
-      <nav class="hidden sm:flex gap-x-4">
-        <Link underline={false} href="/work">
-          Experience
-        </Link>
-        <Link underline={false} href="/projects">
-          Projects
-        </Link>
-         <Link underline={false} href="/blog">
-          Blog
-        </Link>
+      </a>
+
+      <!-- Hamburger button -->
+      <button
+        id="menu-toggle"
+        class="sm:hidden flex flex-col justify-center items-center w-12 h-12 gap-y-[6px] z-50"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <span
+          class="w-6 h-0.5 bg-current transition-all duration-300 ease-in-out"
+        ></span>
+        <span
+          class="w-6 h-0.5 bg-current transition-all duration-300 ease-in-out"
+        ></span>
+        <span
+          class="w-6 h-0.5 bg-current transition-all duration-300 ease-in-out"
+        ></span>
+      </button>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden sm:flex items-center space-x-8">
+        <Link
+          href="/work"
+          class:list={[
+            "no-underline",
+            "hover:underline hover:underline-offset-2",
+          ]}>Experience</Link
+        >
+        <Link href="/projects">Projects</Link>
+        <Link href="/blog">Blog</Link>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <nav
+        id="mobile-menu"
+        class="fixed inset-0 w-full min-h-screen dark:bg-neutral-900 bg-neutral-100 -translate-y-full transition-transform duration-300 ease-in-out lg:hidden z-40"
+        aria-hidden="true"
+      >
+        <div
+          class="flex flex-col items-center justify-center min-h-screen gap-8 p-4"
+        >
+          <Link href="/work" underline={false}>Experience</Link>
+          <Link href="/projects" underline={false}>Projects</Link>
+          <Link href="/blog" underline={false}>Blog</Link>
+        </div>
       </nav>
     </div>
   </Container>
 </header>
+
+<style>
+  #mobile-menu {
+    transform: translateY(-100%);
+  }
+
+  #mobile-menu.is-open {
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuBars = menuToggle?.querySelectorAll("span");
+  const mobileLinks = document.querySelectorAll(".mobile-link");
+  let isOpen = false;
+
+  function toggleMenu() {
+    isOpen = !isOpen;
+
+    // Toggle menu visibility
+    mobileMenu?.classList.toggle("is-open");
+
+    // Update ARIA attributes
+    menuToggle?.setAttribute("aria-expanded", isOpen.toString());
+    mobileMenu?.setAttribute("aria-hidden", (!isOpen).toString());
+
+    // Animate hamburger to X
+    if (menuBars && menuBars.length === 3) {
+      if (isOpen) {
+        menuBars[0].classList.add("rotate-45", "translate-y-2");
+        menuBars[1].classList.add("opacity-0");
+        menuBars[2].classList.add("-rotate-45", "-translate-y-2");
+        document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
+      } else {
+        menuBars[0].classList.remove("rotate-45", "translate-y-2");
+        menuBars[1].classList.remove("opacity-0");
+        menuBars[2].classList.remove("-rotate-45", "-translate-y-2");
+        document.body.style.overflow = ""; // Restore scrolling when menu is closed
+      }
+    }
+  }
+
+  // Toggle menu on button click
+  menuToggle?.addEventListener("click", toggleMenu);
+
+  // Close menu when clicking a link
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (isOpen) toggleMenu();
+    });
+  });
+</script>
