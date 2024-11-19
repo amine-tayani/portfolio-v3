@@ -1,4 +1,3 @@
-
 My personal portfolio built with Astro, TailwindCSS and Typescript, an no frameworks.
 
 ## 📋 Features
