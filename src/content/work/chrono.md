@@ -1,6 +1,6 @@
 ---
 company: "Chrono Salim"
-role: "Web developer"
+role: "Web developer - mission"
 dateStart: "08/01/2024"
 dateEnd: "10/11/2024"
 ---
