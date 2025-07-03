@@ -2,7 +2,7 @@
 company: "Media Experts"
 role: "Full-Stack developer"
 dateStart: "01/14/2024"
-dateEnd: "07/15/2024"
+dateEnd: "08/15/2024"
 ---
 
 - Created a website for Jeanne d’Arc International School Casablanca utilizing React.js and Tailwind CSS.
